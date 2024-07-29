@@ -1,0 +1,46 @@
+package EcommercePlatformSearchFunction;
+
+import java.util.Arrays;
+import java.util.Comparator;
+
+public class BinarySearch {
+    public static Product binarySearch(Product[] products, String targetId) {
+        int left = 0;
+        int right = products.length - 1;
+
+        while (left <= right) {
+            int mid = left + (right - left) / 2;
+            int cmp = products[mid].getProductId().compareTo(targetId);
+
+            if (cmp == 0) {
+                return products[mid];
+            } else if (cmp < 0) {
+                left = mid + 1;
+            } else {
+                right = mid - 1;
+            }
+        }
+        return null;
+    }
+
+    public static void main(String[] args) {
+        Product[] products = {
+            new Product("101", "Laptop", "Electronics"),
+            new Product("102", "Smartphone", "Electronics"),
+            new Product("103", "Tablet", "Electronics"),
+            new Product("104", "Headphones", "Accessories"),
+            new Product("105", "Charger", "Accessories")
+        };
+
+        // Sort the array based on productId for binary search
+        Arrays.sort(products, Comparator.comparing(Product::getProductId));
+
+        // Test Binary Search
+        Product result = binarySearch(products, "103");
+        if (result != null) {
+            System.out.println("Product found: " + result);
+        } else {
+            System.out.println("Product not found");
+        }
+    }
+}

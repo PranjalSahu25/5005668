@@ -1,0 +1,8 @@
+INDEX VERSION 1.134+C:\Users\HP\OneDrive\Desktop\DSA week1\.metadata\.plugins\org.eclipse.jdt.core
+3281364847.index
+1865797976.index
+3833508784.index
+2921698248.index
+4207606346.index
+532043339.index
+2717316604.index
