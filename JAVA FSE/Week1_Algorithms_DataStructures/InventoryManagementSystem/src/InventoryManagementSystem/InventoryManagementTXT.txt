@@ -1,0 +1,19 @@
+1. Understanding the Problem:
+Q1: Explain why data structures and algorithms are essential in handling large inventories
+Ans: Efficient Storage: Proper data structures shall ensure efficient storage of large amounts of data; this will reduce not only memory usage but also the access time.
+Quick Retrieval: Algorithms will enable fast retrieval and updating of inventory data to ensure smooth warehouse operations.
+Scalability: Scalable data structures combined with efficient algorithms will ensure that as the inventory grows, the system's performance does not degrade.
+Data Integrity: Proper data structures and algorithms ensure consistency of data and no corruption in case of concurrent operations.
+Q2: Discuss the types of data structures suitable for this problem.
+Ans: ArrayList: Maintaining a list of products with easy index-based access; poor for searching by productId.
+HashMap: Greatly efficient in look-up, insertion, and deletion based on unique product IDs.
+LinkedList: This will turn out to be useful in cases of frequent addition and deletion. Since it provides efficient insertion and deletion, the lookup times are slower.
+2. Analysis:
+Time Complexity:
+Add Operation: The average time complexity for adding a product using HashMap is O(1).
+Update Operation: The average time complexity for updating a product using HashMap is O(1).
+Delete Operation: The average time complexity for deleting a product using HashMap is O(1).
+Optimizing Operations:
+Load Factor and Resizing: Ensure the load factor of the HashMap is optimized (default is 0.75). This helps in maintaining O(1) time complexity by minimizing collisions.
+Concurrency: For a multi-threaded environment, consider using ConcurrentHashMap which allows concurrent access and modifications without compromising performance.
+Batch Operations: Implement bulk operations for adding, updating, or deleting multiple products at once to reduce overhead and improve performance.
